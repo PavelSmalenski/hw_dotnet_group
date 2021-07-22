@@ -20,9 +20,15 @@ namespace HW02.MotorcycleRepo.Controls.Logging
     /// </summary>
     static class Logging
     {
-        static Dictionary<LogType, Logger> _loggers = new Dictionary<LogType, Logger>();
+        static Dictionary<LogType, Logger> _consoleLoggers = new Dictionary<LogType, Logger>();
+        static Dictionary<LogType, Logger> _fileLoggers = new Dictionary<LogType, Logger>();
 
-        public static Logger GetLogger(LogType logType)
+        public static Logger GetConsoleLogger(LogType logType)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static Logger GetFileLogger(LogType logType)
         {
             throw new NotImplementedException();
         }
