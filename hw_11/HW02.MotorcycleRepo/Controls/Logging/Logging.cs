@@ -6,6 +6,9 @@ using System.Text;
 
 namespace HW02.MotorcycleRepo.Controls.Logging
 {
+    /// <summary>
+    /// Available log types
+    /// </summary>
     public enum LogType
     {
         Application,
