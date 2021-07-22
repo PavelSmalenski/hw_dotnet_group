@@ -12,8 +12,8 @@ namespace HW02.MotorcycleRepo.Controls.Repositories
     {
         public void Add(Motorcycle motorcycle);
         public IEnumerable<Motorcycle> GetAll();
-        public Motorcycle GetById(string id);
-        public void Delete(string id);
+        public Motorcycle GetById(Guid id);
+        public void Delete(Guid id);
         public void Update(Motorcycle motorcycle);
     }
 }
