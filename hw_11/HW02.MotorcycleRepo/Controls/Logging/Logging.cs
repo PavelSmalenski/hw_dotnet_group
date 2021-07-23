@@ -28,6 +28,12 @@ namespace HW02.MotorcycleRepo.Controls.Logging
         //    .WriteTo.File(...)
         //    .WriteTo.SomewhereElse(...)
         // So, according to Serilog GIT PRs - this is possible to write to multiple sinks
+
+        // Log levels:
+        // - Info
+        // - Warning
+        // - Error
+        // - Debug
         static Dictionary<LogType, Logger> _loggers = new Dictionary<LogType, Logger>();
 
         public static Logger GetLogger(LogType logType)
