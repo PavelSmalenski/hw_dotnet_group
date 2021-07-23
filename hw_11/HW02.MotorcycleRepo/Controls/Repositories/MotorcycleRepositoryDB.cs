@@ -34,7 +34,12 @@ namespace HW02.MotorcycleRepo.Controls.Repositories
                             {
                                 try
                                 {
-                                    resultRows.Add(new Motorcycle((string)reader["Name"], (string)reader["Model"], int.Parse((string)reader["Year"]), int.Parse((string)reader["Odometer"])));
+                                    resultRows.Add(new Motorcycle(
+                                        Guid.Parse((string)reader["Id"]),
+                                        (string)reader["Name"],
+                                        (string)reader["Model"],
+                                        int.Parse((string)reader["Year"]),
+                                        int.Parse((string)reader["Odometer"])));
                                 }
                                 catch (FormatException ex)
                                 {
