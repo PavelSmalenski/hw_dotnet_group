@@ -15,9 +15,17 @@ namespace HW02.MotorcycleRepo.Models
         public int Year { get; set; }
         public int Odometer { get; set; }
 
-        public Motorcycle(string name, string model, int year, int odometer)
+        public Motorcycle(Guid id, string name, string model, int year, int odometer)
         {
-            throw new NotImplementedException();
+            Id = id;
+            Name = name;
+            Model = model;
+            Year = year;
+            Odometer = odometer;
+        }
+
+        public Motorcycle()
+        {
         }
     }
 }
