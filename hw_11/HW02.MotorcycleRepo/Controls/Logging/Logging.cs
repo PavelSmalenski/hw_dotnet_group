@@ -23,6 +23,15 @@ namespace HW02.MotorcycleRepo.Controls.Logging
     /// </summary>
     static class Logging
     {
+        public static void Configuration()
+        {
+            Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Debug()
+                .WriteTo.Console()
+                .WriteTo.File("logs/MotorcycleRepo.txt", rollingInterval: RollingInterval.Hour)
+                .CreateLogger();
+        }
+        
         //Log.Logger = new LoggerConfiguration()
         //    .WriteTo.Console()
         //    .WriteTo.File(...)

@@ -1,5 +1,7 @@
-﻿using HW02.MotorcycleRepo.Controls.Repositories;
+﻿using HW02.MotorcycleRepo.Controls.Logging;
+using HW02.MotorcycleRepo.Controls.Repositories;
 using HW02.MotorcycleRepo.Models;
+using Serilog;
 using System;
 
 namespace HW02.MotorcycleRepo
@@ -8,7 +10,9 @@ namespace HW02.MotorcycleRepo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Logging.Configuration();
+
+            Log.Information($"Start application *******");//???????????????
 
             Motorcycle moto = new Motorcycle(id: Guid.Parse("6da180ba-05de-4a05-908f-73e92eb316b4"), name: "Minsk8", model: "X250", year: 2010, odometer: 25_358) ;
 
@@ -26,10 +30,11 @@ namespace HW02.MotorcycleRepo
 
             repositoryArray.Delete( Guid.Parse("ac138e79-76bf-4dbf-ab0f-fb4a5b679e5f") );
 
-            repositoryArray.GetById(Guid.Parse("9eadcf42-e630-4f25-a4d6-a56929dbf993"));
+            Motorcycle moto2 = repositoryArray.GetById(Guid.Parse("9eadcf42-e630-4f25-a4d6-a56929dbf993"));
 
             repositoryArray.Update(moto);
 
+            Log.Debug("The program is successful completed");
         }
     }
 }
