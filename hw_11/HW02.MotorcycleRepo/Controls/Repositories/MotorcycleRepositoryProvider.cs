@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Serilog;
+using HW02.MotorcycleRepo.Models;
 
 namespace HW02.MotorcycleRepo.Controls.Repositories
 {
@@ -9,22 +11,12 @@ namespace HW02.MotorcycleRepo.Controls.Repositories
     /// </summary>
     static class MotorcycleRepositoryProvider
     {
-        static IMotorcycleRepository _staticRepository;
-        static IMotorcycleRepository _dbRepository;
-
-        public static IMotorcycleRepository StaticRepository
-        {
-            get { return _staticRepository; }
-        }
-        public static IMotorcycleRepository DBRepository
-        {
-            get { return _dbRepository; }
-        }
+        public static List<Motorcycle> Motorcycles;
 
         static MotorcycleRepositoryProvider()
         {
-            // For initializing repositories
-            throw new NotImplementedException();
+            Log.Information($"MotorcycleRepositoryProvider constructor");
+            Motorcycles = new List<Motorcycle>();
         }
     }
 }
