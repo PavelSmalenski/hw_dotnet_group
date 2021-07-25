@@ -1,0 +1,17 @@
+2021-07-25 21:57:37.294 +03:00 [INF] MotorcycleRepository.Delete()
+2021-07-25 21:57:37.301 +03:00 [INF] MotorcycleRepository.PrintAll()
+2021-07-25 21:57:37.303 +03:00 [INF] Motorcycle.ToString()
+2021-07-25 21:57:37.304 +03:00 [INF] Motorcycle.ToString()
+2021-07-25 21:57:37.306 +03:00 [INF] Motorcycle.ToString()
+2021-07-25 21:57:37.311 +03:00 [INF] Motorcycle.ToString()
+2021-07-25 21:57:37.314 +03:00 [INF] Motorcycle.ToString()
+2021-07-25 21:57:37.316 +03:00 [INF] Motorcycle.ToString()
+2021-07-25 21:57:37.317 +03:00 [INF] Motorcycle.ToString()
+2021-07-25 21:57:37.319 +03:00 [INF] Motorcycle.ToString()
+2021-07-25 21:57:37.320 +03:00 [INF] Motorcycle.ToString()
+2021-07-25 21:57:37.322 +03:00 [INF] Motorcycle.ToString()
+2021-07-25 21:57:37.331 +03:00 [INF] Motorcycle constructor
+2021-07-25 21:57:37.355 +03:00 [ERR] Something went wrong
+System.Exception: Empty name or model
+   at HW02.MotorcycleRepo.Models.Motorcycle..ctor(String name, String model, Int32 year, Int32 odometer) in Z:\IT-Academy\Git\hw_dotnet_group\hw_11\HW02.MotorcycleRepo\Models\Motorcycle.cs:line 29
+   at HW02.MotorcycleRepo.Program.Main(String[] args) in Z:\IT-Academy\Git\hw_dotnet_group\hw_11\HW02.MotorcycleRepo\Program.cs:line 45

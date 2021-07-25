@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 using Serilog;
-using Serilog;
 using HW02.MotorcycleRepo.Models;
 
 

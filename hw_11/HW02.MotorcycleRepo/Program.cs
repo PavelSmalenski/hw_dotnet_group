@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using HW02.MotorcycleRepo.Controls.Repositories;
 using HW02.MotorcycleRepo.Models;
 using Serilog;
@@ -21,7 +22,7 @@ namespace HW02.MotorcycleRepo
             try
             {
                 MotorcycleRepository motorcycles = new MotorcycleRepository();
-                for (int i = 0; i < 4; i++)
+                for (int i = 0; i <10; i++)
                 {
                     name = Faker.Name.First();
                     model = Faker.Internet.UserName();
@@ -38,9 +39,11 @@ namespace HW02.MotorcycleRepo
                 newMoto.Year = 2021;
                 motorcycles.Update(newMoto);
                 motorcycles.PrintAll();
+                Thread.Sleep(80*1000);
                 motorcycles.Delete(newMoto.Id);
                 motorcycles.PrintAll();
                 Motorcycle newMoto1 = new Motorcycle("", "", 2020, 2000);
+                Log.Information($"End programm!");
             }
             catch (Exception ex)
             {
