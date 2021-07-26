@@ -28,5 +28,10 @@ namespace HW02.MotorcycleRepo.Models
             Year = year;
             Odometer = odometer;
         }
+
+        public override string ToString()
+        {
+            return $"Motorcycle - Id:{Id}; Name:{Name}; Model:{Model}; Year:{Year}; Odometer:{Odometer}";
+        }
     }
 }
