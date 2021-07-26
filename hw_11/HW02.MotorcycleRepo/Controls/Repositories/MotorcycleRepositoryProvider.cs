@@ -24,6 +24,7 @@ namespace HW02.MotorcycleRepo.Controls.Repositories
         static MotorcycleRepositoryProvider()
         {
             _dbRepository = new MotorcycleRepositoryDB();
+            _staticRepository = new MotorcycleRepositoryStatic();
         }
     }
 }
