@@ -38,8 +38,8 @@ namespace HW02.MotorcycleRepo.Controls.Repositories
                                         Guid.Parse((string)reader["Id"]),
                                         (string)reader["Name"],
                                         (string)reader["Model"],
-                                        int.Parse((string)reader["Year"]),
-                                        int.Parse((string)reader["Odometer"])));
+                                        (int)reader["Year"],
+                                        (int)reader["Odometer"]));
                                 }
                                 catch (FormatException ex)
                                 {
@@ -98,7 +98,7 @@ namespace HW02.MotorcycleRepo.Controls.Repositories
             ExecuteSQLModifyingQuery($"DELETE {_targetTable} WHERE [Id]='{id}';");
         }
 
-        public IEnumerable<Motorcycle> GetAll()
+        public List<Motorcycle> GetAll()
         {
             return ExecuteSQLSelectQuery($"SELECT [Id], [Name], [Model], [Year], [Odometer] FROM {_targetTable};");
         }
