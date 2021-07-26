@@ -3,6 +3,8 @@ using Serilog.Core;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.IO;
+using System.Reflection;
 
 namespace HW02.MotorcycleRepo.Controls.Logging
 {
@@ -23,22 +25,31 @@ namespace HW02.MotorcycleRepo.Controls.Logging
     /// </summary>
     static class Logging
     {
-        //Log.Logger = new LoggerConfiguration()
-        //    .WriteTo.Console()
-        //    .WriteTo.File(...)
-        //    .WriteTo.SomewhereElse(...)
-        // So, according to Serilog GIT PRs - this is possible to write to multiple sinks
-
-        // Log levels:
-        // - Info
-        // - Warning
-        // - Error
-        // - Debug
         static Dictionary<LogType, Logger> _loggers = new Dictionary<LogType, Logger>();
+
+        static Logging()
+        {
+            // Log levels:
+            // - Info
+            // - Warning
+            // - Error
+            // - Debug
+
+            string startTime = DateTime.Now.ToString("yyyy'_'MM'_'dd'T'HH'-'mm'-'ss");
+            foreach (var loggerTypeName in Enum.GetNames(typeof(LogType)))
+            {
+                _loggers.Add(
+                    (LogType)Enum.Parse(typeof(LogType), loggerTypeName),
+                    new LoggerConfiguration()
+                        .WriteTo.Console()
+                        .WriteTo.File(path: Path.Combine(Environment.CurrentDirectory, "logs", $"log-{loggerTypeName}-{startTime}.log"), rollingInterval: RollingInterval.Hour)
+                        .CreateLogger());
+            }
+        }
 
         public static Logger GetLogger(LogType logType)
         {
-            throw new NotImplementedException();
+            return _loggers[logType];
         }
     }
 }
