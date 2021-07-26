@@ -1,0 +1,61 @@
+2021-07-26 21:09:27.930 +03:00 [INF] DB Connection opened
+2021-07-26 21:09:27.966 +03:00 [INF] Executing DB read operation
+2021-07-26 21:09:27.978 +03:00 [INF] Number of rows read: 10
+2021-07-26 21:09:27.986 +03:00 [INF] DB Connection closed
+2021-07-26 21:09:27.988 +03:00 [INF] Executing static add operation
+2021-07-26 21:09:27.989 +03:00 [INF] Executing static add operation
+2021-07-26 21:09:27.990 +03:00 [INF] Executing static add operation
+2021-07-26 21:09:27.991 +03:00 [INF] Executing static add operation
+2021-07-26 21:09:27.992 +03:00 [INF] Executing static add operation
+2021-07-26 21:09:27.994 +03:00 [INF] Executing static add operation
+2021-07-26 21:09:27.995 +03:00 [INF] Executing static add operation
+2021-07-26 21:09:27.998 +03:00 [INF] Executing static add operation
+2021-07-26 21:09:27.999 +03:00 [INF] Executing static add operation
+2021-07-26 21:09:28.000 +03:00 [INF] Executing static add operation
+2021-07-26 21:09:28.002 +03:00 [INF] DB Connection opened
+2021-07-26 21:09:28.005 +03:00 [INF] Executing DB read operation
+2021-07-26 21:09:28.007 +03:00 [INF] Number of rows read: 10
+2021-07-26 21:09:28.008 +03:00 [INF] DB Connection closed
+2021-07-26 21:09:28.010 +03:00 [INF] DB Connection opened
+2021-07-26 21:09:28.013 +03:00 [INF] Executing DB command: UPDATE hw_11.Motorcycle SET [Name]='New Name', [Model]='Ninja 400', [Year]=2010, [Odometer]=100 WHERE [Id]='15458234-0e19-49ab-bbf7-388ec6faf8b1';
+2021-07-26 21:09:28.017 +03:00 [INF] Numver of rows affected: 1
+2021-07-26 21:09:28.018 +03:00 [INF] DB Connection closed
+2021-07-26 21:09:28.020 +03:00 [INF] DB Connection opened
+2021-07-26 21:09:28.022 +03:00 [INF] Executing DB read operation
+2021-07-26 21:09:28.023 +03:00 [INF] Number of rows read: 1
+2021-07-26 21:09:28.024 +03:00 [INF] DB Connection closed
+2021-07-26 21:09:28.026 +03:00 [INF] DB Connection opened
+2021-07-26 21:09:28.027 +03:00 [INF] Executing DB command: UPDATE hw_11.Motorcycle SET [Name]='Kawasaki', [Model]='Ninja 400', [Year]=2010, [Odometer]=100 WHERE [Id]='15458234-0e19-49ab-bbf7-388ec6faf8b1';
+2021-07-26 21:09:28.032 +03:00 [INF] Numver of rows affected: 1
+2021-07-26 21:09:28.033 +03:00 [INF] DB Connection closed
+2021-07-26 21:09:28.034 +03:00 [INF] DB Connection opened
+2021-07-26 21:09:28.036 +03:00 [INF] Executing DB read operation
+2021-07-26 21:09:28.037 +03:00 [INF] Number of rows read: 1
+2021-07-26 21:09:28.038 +03:00 [INF] DB Connection closed
+2021-07-26 21:09:28.042 +03:00 [INF] DB Connection opened
+2021-07-26 21:09:28.043 +03:00 [INF] Executing DB command: DELETE hw_11.Motorcycle WHERE [Id]='15458234-0e19-49ab-bbf7-388ec6faf8b1';
+2021-07-26 21:09:28.048 +03:00 [INF] Numver of rows affected: 1
+2021-07-26 21:09:28.050 +03:00 [INF] DB Connection closed
+2021-07-26 21:09:28.052 +03:00 [INF] DB Connection opened
+2021-07-26 21:09:28.053 +03:00 [INF] Executing DB read operation
+2021-07-26 21:09:28.054 +03:00 [INF] Number of rows read: 9
+2021-07-26 21:09:28.055 +03:00 [INF] DB Connection closed
+2021-07-26 21:09:28.062 +03:00 [INF] DB Connection opened
+2021-07-26 21:09:28.063 +03:00 [INF] Executing DB command: INSERT hw_11.Motorcycle VALUES ('15458234-0e19-49ab-bbf7-388ec6faf8b1', 'Kawasaki', 'Ninja 400', 2010, 100);
+2021-07-26 21:09:28.065 +03:00 [INF] Numver of rows affected: 1
+2021-07-26 21:09:28.066 +03:00 [INF] DB Connection closed
+2021-07-26 21:09:28.068 +03:00 [INF] DB Connection opened
+2021-07-26 21:09:28.070 +03:00 [INF] Executing DB read operation
+2021-07-26 21:09:28.071 +03:00 [INF] Number of rows read: 10
+2021-07-26 21:09:28.072 +03:00 [INF] DB Connection closed
+2021-07-26 21:09:28.077 +03:00 [INF] Executing static full return operation
+2021-07-26 21:09:28.081 +03:00 [INF] Executing static update operation
+2021-07-26 21:09:28.083 +03:00 [INF] Executing static add operation
+2021-07-26 21:09:28.084 +03:00 [INF] Executing static add operation
+2021-07-26 21:09:28.086 +03:00 [INF] Executing static update operation
+2021-07-26 21:09:28.087 +03:00 [INF] Executing static add operation
+2021-07-26 21:09:28.090 +03:00 [INF] Executing static add operation
+2021-07-26 21:09:28.092 +03:00 [INF] Executing static delete operation
+2021-07-26 21:09:28.095 +03:00 [INF] Executing static full return operation
+2021-07-26 21:09:28.100 +03:00 [INF] Executing static add operation
+2021-07-26 21:09:28.102 +03:00 [INF] Executing static full return operation
