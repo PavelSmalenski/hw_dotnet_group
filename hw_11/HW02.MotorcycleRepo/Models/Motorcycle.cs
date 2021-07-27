@@ -19,5 +19,19 @@ namespace HW02.MotorcycleRepo.Models
         {
             throw new NotImplementedException();
         }
+
+        public Motorcycle(Guid id, string name, string model, int year, int odometer)
+        {
+            Id = id;
+            Name = name;
+            Model = model;
+            Year = year;
+            Odometer = odometer;
+        }
+
+        public override string ToString()
+        {
+            return $"Motorcycle - Id:{Id}; Name:{Name}; Model:{Model}; Year:{Year}; Odometer:{Odometer}";
+        }
     }
 }

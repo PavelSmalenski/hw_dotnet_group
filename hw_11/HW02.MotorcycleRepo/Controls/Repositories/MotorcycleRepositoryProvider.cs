@@ -23,8 +23,8 @@ namespace HW02.MotorcycleRepo.Controls.Repositories
 
         static MotorcycleRepositoryProvider()
         {
-            // For initializing repositories
-            throw new NotImplementedException();
+            _dbRepository = new MotorcycleRepositoryDB();
+            _staticRepository = new MotorcycleRepositoryStatic();
         }
     }
 }
