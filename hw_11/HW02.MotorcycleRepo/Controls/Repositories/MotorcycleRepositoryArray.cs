@@ -8,7 +8,7 @@ namespace HW02.MotorcycleRepo.Controls.Repositories
 {
     class MotorcycleRepositoryArray : IMotorcycleRepository
     {
-        Motorcycle[] motorcycles = new Motorcycle[0];
+        static Motorcycle[] motorcycles = new Motorcycle[0];
 
         public void Add(Motorcycle motorcycle)
         {
@@ -27,10 +27,11 @@ namespace HW02.MotorcycleRepo.Controls.Repositories
                 if (motorcycles[i].Id == id)
                 {
                     Array.Clear(motorcycles, i, 1);
-                    for (int j = i; j < motorcycles.Length - 1; j++)
-                    {
-                        motorcycles[j] = motorcycles[j + 1];
-                    }
+                    motorcycles[i] = motorcycles[motorcycles.Length - 1];
+                    //for (int j = i; j < motorcycles.Length - 1; j++)
+                    //{
+                    //    motorcycles[j] = motorcycles[j + 1];
+                    //}
                     Array.Resize(ref motorcycles, motorcycles.Length - 1);
                     Log.Information($"Deleted Motorcycle with Id {id} is done");
                     isFind = true;
@@ -46,7 +47,7 @@ namespace HW02.MotorcycleRepo.Controls.Repositories
 
         public IEnumerable<Motorcycle> GetAll()
         {
-            throw new NotImplementedException();
+            return motorcycles;
         }
 
         public Motorcycle GetById(Guid id)
@@ -70,7 +71,7 @@ namespace HW02.MotorcycleRepo.Controls.Repositories
                 Log.Error($"Can not GetById Motorcycle with Id {id}. Motorcycle not found ");
             }
 
-            return result; //????????????
+            return result; 
         }
 
         public void Update(Motorcycle motorcycle)
@@ -86,7 +87,6 @@ namespace HW02.MotorcycleRepo.Controls.Repositories
                     isFind = true;
                     break;
                 }
-                else { /* moto is not find*/}
             }
 
             if (!isFind)

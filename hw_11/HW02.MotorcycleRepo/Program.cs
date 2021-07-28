@@ -12,7 +12,7 @@ namespace HW02.MotorcycleRepo
         {
             Logging.Configuration();
 
-            Log.Information($"Start application *******");//???????????????
+            Log.Information($"Start application {System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}");
 
             Motorcycle moto = new Motorcycle(id: Guid.Parse("6da180ba-05de-4a05-908f-73e92eb316b4"), name: "Minsk8", model: "X250", year: 2010, odometer: 25_358) ;
 
@@ -33,6 +33,8 @@ namespace HW02.MotorcycleRepo
             Motorcycle moto2 = repositoryArray.GetById(Guid.Parse("9eadcf42-e630-4f25-a4d6-a56929dbf993"));
 
             repositoryArray.Update(moto);
+
+            //Motorcycle[] motoArray = repositoryArray.GetAll();
 
             Log.Debug("The program is successful completed");
         }
