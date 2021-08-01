@@ -2,7 +2,6 @@
 using Serilog.Core;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace HW02.MotorcycleRepo.Controls.Logging
 {
@@ -23,19 +22,16 @@ namespace HW02.MotorcycleRepo.Controls.Logging
     /// </summary>
     static class Logging
     {
-        //Log.Logger = new LoggerConfiguration()
-        //    .WriteTo.Console()
-        //    .WriteTo.File(...)
-        //    .WriteTo.SomewhereElse(...)
-        // So, according to Serilog GIT PRs - this is possible to write to multiple sinks
-
-        // Log levels:
-        // - Info
-        // - Warning
-        // - Error
-        // - Debug
         static Dictionary<LogType, Logger> _loggers = new Dictionary<LogType, Logger>();
 
+        internal static void Configuration()
+        {
+            Log.Logger = new LoggerConfiguration()
+            .MinimumLevel.Debug()
+            .WriteTo.Console()
+            .WriteTo.File("logs/logs.txt", rollingInterval: RollingInterval.Minute)
+            .CreateLogger();
+        }
         public static Logger GetLogger(LogType logType)
         {
             throw new NotImplementedException();
