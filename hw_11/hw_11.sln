@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW01.SongDataProcessing", "HW01.SongDataProcessing\HW01.SongDataProcessing.csproj", "{E8A9325F-A15E-48BE-B2DE-DAE455319D83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW02.MotorcycleRepo", "HW02.MotorcycleRepo\HW02.MotorcycleRepo.csproj", "{F5BEA039-A3AC-4701-8CA6-FECB53FE4BCC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8A9325F-A15E-48BE-B2DE-DAE455319D83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8A9325F-A15E-48BE-B2DE-DAE455319D83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8A9325F-A15E-48BE-B2DE-DAE455319D83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8A9325F-A15E-48BE-B2DE-DAE455319D83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5BEA039-A3AC-4701-8CA6-FECB53FE4BCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5BEA039-A3AC-4701-8CA6-FECB53FE4BCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5BEA039-A3AC-4701-8CA6-FECB53FE4BCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5BEA039-A3AC-4701-8CA6-FECB53FE4BCC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {10F25100-BB4B-4851-89AB-69B1F19FAF86}
+	EndGlobalSection
+EndGlobal
